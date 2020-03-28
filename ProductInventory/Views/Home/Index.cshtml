@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>
+        Change Product Pricing
+        @Html.ActionLink("here", // <-- Link text
+                            "Index", // <-- Action Method Name
+                            "Product", // <-- Controller Name
+                            null, // <-- Route value
+                            null // <-- htmlArguments
+                            )
+    </p>
+    <p></p>
+</div>
+

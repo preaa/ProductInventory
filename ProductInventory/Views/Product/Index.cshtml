@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ProductInventory.Models.Product>
+
+    <h2 style="text-align: center;">List of Available Products</h2>
+
+<table class="table">
+
+    <tr>
+        <th>
+            @Html.Label("ProductId")
+        </th>
+        <th>
+            @Html.Label("Name")
+        </th>
+        <th>
+            @Html.Label("BrandName")
+        </th>
+        <th>
+            @Html.Label("Supplier")
+        </th>
+
+        <th>
+            @Html.Label("Price")
+        </th>
+
+        <th>
+            @Html.Label("Comments")
+        </th>
+
+    </tr>
+
+    @foreach (var product in Model)
+    {
+<tr>
+    <td>@product.ProductId</td>
+    <td>@product.Name</td>
+    <td>@product.BrandName</td>
+    <td>@product.SupplierName</td>
+    <td>@product.Price</td>
+    <td>@product.Comments</td>
+    <td>@Html.ActionLink("Edit", "Edit", new { productId = product.ProductId })</td>
+
+</tr>
+    }
+
+</table>
